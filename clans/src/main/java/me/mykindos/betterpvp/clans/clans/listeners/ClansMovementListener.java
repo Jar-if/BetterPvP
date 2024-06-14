@@ -9,7 +9,7 @@ import me.mykindos.betterpvp.core.client.Client;
 import me.mykindos.betterpvp.core.client.Rank;
 import me.mykindos.betterpvp.core.client.repository.ClientManager;
 import me.mykindos.betterpvp.core.components.clans.data.ClanTerritory;
-import me.mykindos.betterpvp.core.framework.delayedactions.events.ClanHomeTeleportEvent;
+import me.mykindos.betterpvp.core.framework.delayedactions.events.ClanCoreTeleportEvent;
 import me.mykindos.betterpvp.core.framework.delayedactions.events.ClanStuckTeleportEvent;
 import me.mykindos.betterpvp.core.listener.BPvPListener;
 import me.mykindos.betterpvp.core.utilities.UtilMessage;
@@ -111,7 +111,7 @@ public class ClansMovementListener extends ClanListener {
     }
 
     @EventHandler
-    public void onClanHomeTeleport(ClanHomeTeleportEvent event) {
+    public void onClanHomeTeleport(ClanCoreTeleportEvent event) {
         if (event.isCancelled()) return;
 
         Player player = event.getPlayer();
