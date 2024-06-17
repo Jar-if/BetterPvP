@@ -12,6 +12,7 @@ import me.mykindos.betterpvp.core.components.clans.data.ClanTerritory;
 import me.mykindos.betterpvp.core.framework.delayedactions.events.ClanCoreTeleportEvent;
 import me.mykindos.betterpvp.core.framework.delayedactions.events.ClanStuckTeleportEvent;
 import me.mykindos.betterpvp.core.listener.BPvPListener;
+import me.mykindos.betterpvp.core.utilities.UtilFormat;
 import me.mykindos.betterpvp.core.utilities.UtilMessage;
 import me.mykindos.betterpvp.core.utilities.UtilServer;
 import me.mykindos.betterpvp.core.utilities.UtilWorld;
@@ -176,7 +177,7 @@ public class ClansMovementListener extends ClanListener {
         });
 
         if (event.getDelayInSeconds() > 0) {
-            UtilMessage.simpleMessage(player, "Clans", "Teleporting to clan home in <green>%d</green> seconds, don't move!", event.getDelayInSeconds());
+            UtilMessage.simpleMessage(player, "Clans", "Teleporting to clan home in <alt>%s</alt> seconds, don't move!", UtilFormat.formatNumber(event.getDelayInSeconds()));
         }
     }
 
